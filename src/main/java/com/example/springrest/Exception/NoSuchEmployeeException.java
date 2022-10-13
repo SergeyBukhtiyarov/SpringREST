@@ -1,4 +1,4 @@
-package com.example.springrest.controller.Exception;
+package com.example.springrest.Exception;
 
 import lombok.Data;
 

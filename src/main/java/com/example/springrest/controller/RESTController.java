@@ -1,6 +1,6 @@
 package com.example.springrest.controller;
 
-import com.example.springrest.controller.Exception.NoSuchEmployeeException;
+import com.example.springrest.Exception.NoSuchEmployeeException;
 import com.example.springrest.entity.Employee;
 import com.example.springrest.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,10 +32,11 @@ public class RESTController {
     }
 
     @PostMapping("/employees")
-    public Employee addNewEmployee(@RequestBody Employee employee) {
+    public String addNewEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
-        return employee;
+        return "Employee was added!";
     }
+
     @PutMapping("/employees")
     public Employee updateEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
